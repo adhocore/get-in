@@ -1,0 +1,21 @@
+{
+    "name": "adhocore/get-in",
+    "description": "Handy Traversal of chained objects with error trap and default value (suited for View).",
+    "keywords": ["object", "traverse", "chained"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jitendra Adhikari",
+            "email": "jiten.adhikary@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": { "Ahc\\": "lib/" }
+    },
+    "extra": {
+        "branch-alias": { "dev-master": "1.0-dev" }
+    }
+}
