@@ -56,7 +56,7 @@ echo \Ahc\Get::in($user, 'getGroup.getPermission.getName', 'some name');
 ## advantage
 
 - prevents multi layer check
-- pervents errors like "Call to a member function on a non-object"
+- prevents errors like "Call to a member function on a non-object"
 - saves from temporary variable creation during the checks
 - provides a way to have default value should it fail at any point
 
