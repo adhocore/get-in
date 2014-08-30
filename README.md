@@ -9,7 +9,7 @@ for something like:
 
 ```php
 echo $user->getGroup()->getPermission()->getName();
-``
+```
 
 this scenario is not uncommon in any ORM. now, in case `$user` is `null` or `$user->getGroup()` is `null` or etc, it can be hell of a checks like: 
 
