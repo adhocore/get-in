@@ -53,6 +53,11 @@ echo \Ahc\Get::in($user, 'getGroup.getPermission.getName', 'some name');
 ```
 
 
+## installation
+
+edit your `composer.json` to include `"adhocore/get-in": "1.0.*@dev"` in the `require` section and run `composer update`
+
+
 ## advantage
 
 - prevents multi layer check
