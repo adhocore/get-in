@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 namespace Ahc\Tests;
 
-class User 
+class User
 {
     private $group;
 

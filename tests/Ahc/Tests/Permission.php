@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 namespace Ahc\Tests;
 
-class Permission 
+class Permission
 {
     private $name;
 

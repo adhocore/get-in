@@ -1,9 +1,10 @@
-<?php 
+<?php
 
-if ( ! is_file($vendorLoader = __DIR__.'/../vendor/autoload.php')) {
-    spl_autoload_register(function($class){
+
+if (!is_file($vendorLoader = __DIR__ . '/../vendor/autoload.php')) {
+    spl_autoload_register(function ($class) {
         $class = ltrim($class, '\\');
-        if (0 === stripos($class, 'Ahc')){
+        if (0 === stripos($class, 'Ahc')) {
             $path =  dirname(__DIR__) . DIRECTORY_SEPARATOR;
             $path .= 0 === stripos($class, 'Ahc\\Tests') ? 'tests' : 'lib';
             $path .= DIRECTORY_SEPARATOR;
