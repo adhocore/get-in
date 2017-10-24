@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Ahc\Tests;
 
@@ -9,18 +9,18 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testWithAllMethodsAndValues()
     {
         $this->assertEquals(
-            'permission name', 
+            'permission name',
             GetIn::in(
-                new User(new Group(new Permission('permission name'))), 
+                new User(new Group(new Permission('permission name'))),
                 'getGroup.getPermission.getName'
             )
         );
 
         // methods as array
         $this->assertEquals(
-            'permission name', 
+            'permission name',
             GetIn::in(
-                new User(new Group(new Permission('permission name'))), 
+                new User(new Group(new Permission('permission name'))),
                 ['getGroup', 'getPermission', 'getName']
             )
         );
@@ -29,9 +29,9 @@ class GetTest extends \PHPUnit_Framework_TestCase
     public function testWithDefaultPermissionName()
     {
         $this->assertEquals(
-            'default permission name', 
+            'default permission name',
             GetIn::in(
-                new User(new Group(new Permission())), 
+                new User(new Group(new Permission())),
                 'getGroup.getPermission.getName',
                 'default permission name'
             )
@@ -42,12 +42,12 @@ class GetTest extends \PHPUnit_Framework_TestCase
     {
         $permission = new Permission();
         $this->assertEquals(
-            $permission, 
+            $permission,
             GetIn::in(
-                new User(new Group($permission)), 
+                new User(new Group($permission)),
                 'getGroup.getPermission'
             )
-        );      
+        );
     }
 
     public function testMissingMethodWithDefault()
@@ -56,10 +56,10 @@ class GetTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(
             $otherPermission,
             GetIn::in(
-                new User(new Group()), 
+                new User(new Group()),
                 'getGroup.getPermission',
                 $otherPermission
-            )           
+            )
         );
     }
 }
