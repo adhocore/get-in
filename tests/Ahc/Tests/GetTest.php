@@ -3,8 +3,9 @@
 namespace Ahc\Tests;
 
 use Ahc\Get as GetIn;
+use PHPUnit\Framework\TestCase;
 
-class GetTest extends \PHPUnit_Framework_TestCase
+class GetTest extends TestCase
 {
     public function testWithAllMethodsAndValues()
     {
@@ -58,6 +59,19 @@ class GetTest extends \PHPUnit_Framework_TestCase
             GetIn::in(
                 new User(new Group()),
                 'getGroup.getPermission',
+                $otherPermission
+            )
+        );
+    }
+
+    public function testMissingMethodWithNonExistedMethod()
+    {
+        $otherPermission = new Permission('other');
+        $this->assertEquals(
+            $otherPermission,
+            GetIn::in(
+                new User(new Group()),
+                'getInvalidGroup.invalidMethod',
                 $otherPermission
             )
         );
