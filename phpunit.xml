@@ -9,7 +9,7 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="./tests/bootstrap.php"
+         bootstrap="vendor/autoload.php"
 >
     <testsuites>
         <testsuite name="Ahc GetIn Test Suite">
@@ -22,5 +22,5 @@
             <directory>./lib/Ahc/</directory>
         </whitelist>
     </filter>
-    
+
 </phpunit>
